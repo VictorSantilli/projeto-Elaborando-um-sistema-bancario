@@ -79,7 +79,7 @@ def criar_conta(agencia,numero_conta, usuarios):
         print("=== Conta criada com sucesso ===")
         return {"Agencia": agencia, "numero_conta":numero_conta , "usuario":usuario}
     
-    print("\nUsuario não encontrado, dluxo de criação de conta encerrado!")
+    print("\nUsuario não encontrado, fluxo de criação de conta encerrado!")
 
 def listar_contas(contas):
      for conta in contas:
@@ -131,7 +131,8 @@ def main():
              criar_usuario(usuarios)
 
         elif opcao == "nc":
-             numero_conta += len(contas) + 1
+             
+             numero_conta = len(contas) + 1
              conta = criar_conta(AGENCIA ,numero_conta,usuarios)
 
              if conta:
